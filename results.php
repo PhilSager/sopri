@@ -383,7 +383,7 @@ function goToStore() {
 		didxValue = storeItems.join(",");
 		didxValue = didxValue.replace(/\|.*?\|/g, "");
 		//storeUrl = 'http://www.ohiohistorystore.com/Ohio-Death-Certificate-Photocopy-P7464.aspx';
-		storeUrl = 'http://www.ohiohistorystore.com/Select-Ohio-Public-Record-Photocopy-P7464.aspx';
+		storeUrl = 'http://www.ohiohistorystore.com/Select-Ohio-Public-Record-Photocopy-P8888.aspx';
 		//$().redirect('http://www.ohiohistorystore.com/Ohio-Death-Certificate-Photocopy-P7464.aspx', { 'didx': didxValue });
 			
         $('<form>', {

@@ -112,7 +112,7 @@ div.jGrowl div.validation {
 	<div style="width:100%">
 	
 	<form id="nameform" name="namesearch" action="results.php" method="POST" onsubmit="return validateForm()"  style="width: 500px;margin: 0 auto">
-	Last name: <input type="search" name="lastname"> First Name: <input type="search" name="firstname"  />
+	Last name: <input type="search" name="lastname" size="15" maxsize="30" /> First Name: <input type="search" name="firstname" size="15" maxsize="30" />
 	<br/>County: 
 	<select type="search" name="county">
 		<option value="" selected>ALL COUNTIES
