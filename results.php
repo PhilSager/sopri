@@ -33,6 +33,7 @@ $end = $start + ($max_per_page - 1);
 $prev_start = 1;
 $next_start = $start + $max_per_page;
 $num_rows = array();
+$is_inside = preg_match('/172\.16\./', $_SERVER["SERVER_ADDR"]) || preg_match('/127\.0\.0\.1/', $_SERVER["SERVER_ADDR"]);
 
 require 'paginator.class.php';
 
@@ -612,7 +613,7 @@ $(document).ready(function() {
 			//echo( " (Source: ". $source_array[$val] . ")" );
 			echo( "</span>" );
 			echo( '</label>&nbsp;<span style="white-space: normal; font-size:80%"> ('.$source_name.')</span>' );
-			echo( preg_match('/19[56]\d\d\d\d\d\d\d/',$row['Identifier']) ? '<span style="white-space: normal; font-size:80%"> &nbsp;<a href="http://deathcertificateimages.ohiohistory.org/images/display.html?id='.$row['Identifier'].'" target="_blank">Print</a></span>' : "" );
+			echo( preg_match('/19[56]\d\d\d\d\d\d\d/',$row['Identifier']) && $is_inside ? '<span style="white-space: normal; font-size:80%"> &nbsp;<a href="http://deathcertificateimages.ohiohistory.org/images/display.html?id='.$row['Identifier'].'" target="_blank">Print</a></span>' : "" );
 			echo( '<br/>' );
 			//echo( '</td></tr>' );
 			
