@@ -33,7 +33,7 @@ $end = $start + ($max_per_page - 1);
 $prev_start = 1;
 $next_start = $start + $max_per_page;
 $num_rows = array();
-$is_inside = preg_match('/172\.16\./', $_SERVER["SERVER_ADDR"]) || preg_match('/127\.0\.0\.1/', $_SERVER["SERVER_ADDR"]);
+$is_inside = preg_match('/'.$dbcon['this_address'].'/', $_SERVER["SERVER_ADDR"]) || preg_match('/127\.0\.0\.1/', $_SERVER["SERVER_ADDR"]);
 
 require 'paginator.class.php';
 
