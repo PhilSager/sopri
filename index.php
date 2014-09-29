@@ -1,3 +1,10 @@
+<?php
+
+$dbcon = parse_ini_file('conf/dbcon.ini');
+$is_inside = preg_match('/'.$dbcon['this_address'].'/', $_SERVER["REMOTE_ADDR"]);
+
+?>
+
 <!doctype html public 
   "-//w3c//dtd html 4.01 transitional//en"
   "http://www.w3.org/tr/1999/rec-html401-19991224/loose.dtd">
@@ -112,7 +119,7 @@ div.jGrowl div.validation {
 	<div style="width:100%">
 	
 	<form id="nameform" name="namesearch" action="results.php" method="POST" onsubmit="return validateForm()"  style="width: 500px;margin: 0 auto">
-	Last name: <input type="search" name="lastname"> First Name: <input type="search" name="firstname"  />
+	Last name: <input type="search" name="lastname" size="15" maxsize="30" /> First Name: <input type="search" name="firstname" size="15" maxsize="30" />
 	<br/>County: 
 	<select type="search" name="county">
 		<option value="" selected>ALL COUNTIES
@@ -211,19 +218,32 @@ div.jGrowl div.validation {
 
 <div style="width:500px;margin: 0 auto;">
 	
+<p>ATTENTION: Due to the new availability of death certificates from 1954-1963, the Archives Library expects an unusually high volume of orders and patrons using our library terminals.  Time on the computer terminals will be limited to 15 minutes when there are no empty ones available for other patrons to use.  Order processing and shipping times will be slowed during the initial rush.  We thank you for your patience and understanding in this matter. </p> 
+
 <p>The Select Ohio Public Records Index includes the following:</p>	
 
 <ul>
-	<li>Ohio Department of Health Death Certificates, 1913-1944</li>
-	<li>Ohio Department of Health Stillborn Death Certificates, 1913-1935, 1942-1946</li>
+	<li>Ohio Department of Health Death Certificates, 1913-1963</li>
+	<li>Ohio Department of Health Stillborn Death Certificates, 1913-1935, 1942-1949</li>
 	<li>Columbus Board of Health Death Certificates, 1904-1908</li>
 	<li>Ohio Girls Industrial School, 1869-1943</li>
 	<li>Ohio Boys Industrial School, 1858-1944</li>
 </ul>
 
-<p>You can purchase photocopies of Ohio death certificates online. Use the Index to find and select your certificates, save them to your list and click on purchase to checkout through the Ohio History Store. Copies cost $7 per certificate (Ohio residents pay 7% sales tax).</p> 
+<p>ORDERING COPIES</p>
 
-<p>You can <a href="request.php">request copies</a> of death certificates for the years December 20, 1908 to 1912 through 1953 that don't show up in our online Select Ohio Public Records index by completing an online request form and checking out through the Ohio History Store. Stillborn death certificates are only available from December 20, 1908 to 1935 and 1942-1946.</p>
+<p>You can purchase photocopies of Ohio death certificates online.  Use the Index to find and select your certificates, save them to your list and click on purchase to checkout through the Ohio History Store.  Copies cost $7 per certificate (Ohio residents pay 7.5% sales tax).</p> 
+
+<p>You can <a href="request.php">request copies</a> of death certificates from December 20, 1908 to 1953 that don’t show up in our online Select Ohio Public Records Index by completing an online request form and checking out through the Ohio History Store.  Stillborn death certificates are only available from December 20, 1908 to 1935 and from 1942 to 1949.</p>
+
+<p>Copies of death certificates from the years 1954 to 1963 will be delivered by email with the document attached as an image file.  All other Select Ohio Public Records copies will be shipped by postal mail.</p>
+
+<?php 
+
+echo( $is_inside ? '<p>PRINTING COPIES YOURSELF AT THE ARCHIVES LIBRARY</p><p>Patrons who access this index from the Ohio History Center Archives Library can print copies of the 1954 – 1963 certificates directly from the computer terminals in the Research Room.  To do so, click on the “print” link in the list of results from your search.  This will bring you to image files of the front, back, and any extra pages that came with the death certificate.  Please note that the back pages are usually blank forms.  We advise looking over all the images for each certificate before printing them off.  There is a button at the top of the images page that will allow you to choose which pages you want and print them to the printer at the Reference Desk.  The fee for copies printed in the Reading Room is \$.25 a page.</p><p>All other Select Ohio Public Records are on microfilm and can be accessed in the Archives Library at the Ohio History Center.  Patrons may look up and print their own copies for \$.25 a page.</p>' : "" );
+
+?>
+
 
 <p><a href="http://www.ohiohistory.org/collections--archives/archives-library/copy-requests" target="_blank">More information</a> about the Select Ohio Public Records Index.</p>
 
