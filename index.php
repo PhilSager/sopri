@@ -232,7 +232,7 @@ div.jGrowl div.validation {
 
 <p>ORDERING COPIES</p>
 
-<p>You can purchase photocopies of Ohio death certificates online.  Use the Index to find and select your certificates, save them to your list and click on purchase to checkout through the Ohio History Store.  Copies cost $7 per certificate (Ohio residents pay 7.5% sales tax).</p> 
+<p>You can purchase uncertified photocopies of Ohio death certificates online.  Use the Index to find and select your certificates, save them to your list and click on purchase to checkout through the Ohio History Store.  Copies cost $7 per certificate (Ohio residents pay 7.5% sales tax).</p> 
 
 <p>You can <a href="request.php">request copies</a> of death certificates from December 20, 1908 to 1953 that don't show up in our online Select Ohio Public Records Index by completing an online request form and checking out through the Ohio History Store.  Stillborn death certificates are only available from December 20, 1908 to 1935 and from 1942 to 1949.</p>
 
